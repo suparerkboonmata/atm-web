@@ -6,14 +6,31 @@
     <title>Customer</title>
 </head>
 <body>
+
+<h1>Register Customer</h1>
+    <form action="#" th:action="@{/customer}" method="post">
+        <label for="inputId">Id</label>
+        <input type="input" name="id" id="inputId">
+        <label for="inputName">Name</label>
+        <input type="input" name="name" id="inputName">
+        <label for="inputPin">Pin</label>
+        <input type="input" name="pin" id="inputPin">
+        <input type="submit" value="Register">
+    </form>
+<hr>
+
+<h1>All Customers</h1>
+
 <table border="1px">
-    <tr><td>id</td><td>name</td></tr>
-    <div th:each="customers :${allCustomers}">
-        <tr>
-            <td><span th:text="${customers.id}"></span></td>
-            <td><span th:text="${customers.name}"></span></td>
-        </tr>
-    </div>
+    <tr><th>Id</th> <th>Name</th><th>Pin</th></tr>
+
+    <tr th:each="customer : ${allCustomers}">
+        <td th:text="${customer.id}"></td>
+        <td th:text="${customer.name}"></td>
+        <td th:text="${customer.pin}"></td>
+    </tr>
+
 </table>
+
 </body>
 </html>
