@@ -3,29 +3,20 @@ package th.go.rd.atm.controller;
 public class Customer {
     private int id;
     private String name;
-    private String pin;
+    private int pin;
 
-
-    public Customer(int id, String name, String pin) {
+    public Customer(int id,String name,int pin){
         this.id = id;
         this.name = name;
         this.pin = pin;
-//        this.account = new BankAccount(id,name,"Saving");
-    }
-
-    public boolean checkPin(String pin){
-        boolean chk;
-        if(this.pin.equals(pin)){
-            chk = true;
-        }else {
-            chk = false;
-        }
-         return chk;
- //       return this.pin.equals(pin);
     }
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -36,20 +27,11 @@ public class Customer {
         this.name = name;
     }
 
-//    public BankAccount getAccount() {
-//        return account;
-//    }
-//
-//    public void setAccount(BankAccount account) {
-//        this.account = account;
-//    }
+    public int getPin() {
+        return pin;
+    }
 
-//    @Override
-//    public String toString() {
-//        return "Customer{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", account=" + account +
-//                '}';
-//    }
+    public void setPin(int pin) {
+        this.pin = pin;
+    }
 }

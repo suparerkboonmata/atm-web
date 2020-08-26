@@ -6,6 +6,14 @@
     <title>Customer</title>
 </head>
 <body>
-<h1 th:each="customer : ${allCustomers}" th:text="${customer}"></h1>
+<table border="1px">
+    <tr><td>id</td><td>name</td></tr>
+    <div th:each="customers :${allCustomers}">
+        <tr>
+            <td><span th:text="${customers.id}"></span></td>
+            <td><span th:text="${customers.name}"></span></td>
+        </tr>
+    </div>
+</table>
 </body>
 </html>
