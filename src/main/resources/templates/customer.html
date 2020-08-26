@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Customer</title>
 </head>
 <body>
-Area : <th th:text="${result}"></th>
+<h1 th:each="customer : ${allCustomers}" th:text="${customer}"></h1>
 </body>
 </html>
